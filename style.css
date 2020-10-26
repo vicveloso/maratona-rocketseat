@@ -1,0 +1,112 @@
+/*
+CASCADING STYLESHEET
+*/
+/*ALINHAMENTOS, ESPAÇMENTOS, LARGURAR E ALTURAS*/
+*{box-sizing: border-box;}
+html,body{
+    margin: 0;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    height:100vh;
+    font-family: 'Roboto', sans-serif;
+    background-color:#F9F9F9;
+}
+header h1, main h2 {
+    margin-bottom: 70px;
+}
+h1,h2{color:#000000cc}
+main h2 span{color:#FF5758}
+header,main,footer{
+    text-align: center;
+}
+main .donors{
+    display: grid;
+    grid-template-columns:1fr 1fr;
+}
+.donors p{
+    margin-top: 24px;
+    font-size: 14px;
+
+}
+.blood{
+    color:#FF5758;
+    font-weight: bold;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.blood::before {
+content:"";
+background-color:#FF575811;
+width: 40px;
+height:40px;
+position: absolute;
+/*gotinha*/
+border-radius: 50%;
+border-top-right-radius: 0%;
+transform: rotate(-45deg);
+}
+header,.form,main
+{margin: 0 auto 70px;
+    width: 90%;
+    max-width: 500px;
+}
+.logo{margin: 10% 10%;
+    width: 25%;
+}
+section.form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color:#FF5758;
+    padding: 16px 64px;
+    border-radius: 6px;
+    
+}
+section.form h2{
+    text-align:right;
+    margin-right: 40px;
+    margin-left: 0px;
+    margin-top:40px;
+    color:#ffffee;
+    font-size:18px;
+   
+}
+form input,form button{
+    width: 100%;
+    margin-bottom: 4px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    border:1px #ffffee solid;
+    
+}
+form input{
+    background-color: transparent;
+}
+form input::placeholder{color: #ffffee;
+    font-family: 'Roboto', sans-serif;
+}
+form button{
+    font-weight: bold;
+    background-color: #ffffee;
+}
+footer{
+    margin-top: auto;
+    padding: 16px;
+    border:1px #ffffee;
+}
+
+/*js*/
+section.form{
+    
+}
+section.form.hide{
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    margin-top:-70px;
+}
