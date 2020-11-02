@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>DOM - Desafio 2</title>
+</head>
+
+<body>
+<!--definindo um nome para identificar o que o codigo abaixo-->
+  <div id="app"></div>
+  <!--criando um caixa para input, nesse caso a entrada solicitada é o nome-->
+<button id="botao">Clique aqui</button>
+    <!--definindo a identificação de um elemento, no caso uma caixa-->
+<div id = "box" ></div>
+    <!--link para o documento JavaScript-->
+  <script >
+//selecionado o botão, de acordo com o identificador citado
+    var btnElement = document.getElementById("botao");
+//selecionado a caixa, de acordo com o identificador citado
+    var bxElement = document.getElementById('box');
+//função para pegar cor aleatoria, no modelo de código hexadecimal 
+    function getRandomColor() {
+      var letters = '0123456789ABCDEF';
+      var color = '#';
+      for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+//função que cria um caixa (creatElement)quando o botão selecionado acima é clicado (onclick)
+    btnElement.onclick = function () {
+      var boxes = document.createElement('div');
+      boxes.style.width = '100px';
+      boxes.style.height = '100px';
+      boxes.style.backgroundColor = '#F00';
+//função que altera a cor da caixa quando passam o mouse em cima da caixa, a cor é definida
+//na função(getRandomColor)
+      boxes.onmouseover = function () {
+        boxes.style.backgroundColor = getRandomColor();
+      }
+
+      bxElement.appendChild(boxes);
+    };
+  </script>
+</body>
+</html>

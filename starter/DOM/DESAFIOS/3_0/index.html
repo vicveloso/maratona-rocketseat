@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>DOM - Desafio 3</title>
+</head>
+
+<body>
+<!--criando uma lista e definindo um nome para identificar a lista abaixo-->
+<ul></ul>
+  <script >
+//variavel let referenciando o elemento que preciso utilizando o identificador definido acima
+let listElement = document.querySelector('ul');
+let nomes = ['Diego', 'Gabriel', 'Lucas'];
+//loop de um objeto dentro do vetor
+for (nome of nomes) {
+  let liElement = document.createElement('li');
+  let textElement = document.createTextNode(nome);
+
+  liElement.appendChild(textElement);
+  listElement.appendChild(liElement);
+ 
+}
+
+  </script>
+</body>
+</html>
+
+
